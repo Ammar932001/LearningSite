@@ -4,9 +4,10 @@
     <div class="flex">
       <ul class="flex gap-2">
         <li><NuxtLink to="/">Home</NuxtLink></li>
-        <li><NuxtLink to="/">About</NuxtLink></li>
+        <li><NuxtLink to="/about">About</NuxtLink></li>
         <li><NuxtLink to="/">Categories</NuxtLink></li>
-        <li><NuxtLink to="/">Top Sellers</NuxtLink></li>    
+        <li><NuxtLink to="/">Top Sellers</NuxtLink></li>
+        <li><NuxtLink to="/contactus">Contact Us</NuxtLink></li>     
         <li v-if="userStore.userState === 'loggedOut'">
           <nuxt-link to="/login">Login</nuxt-link>
         </li>
