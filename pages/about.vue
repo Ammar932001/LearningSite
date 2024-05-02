@@ -5,5 +5,5 @@
 <script setup lang="ts">
 import { useUserContactStore } from '~/stores/userContactStore'
 const contactInfo = useUserContactStore()
-console.log(">>>>DEV44 the contact info is ",contactInfo.userInfo)
+// console.log(">>>>DEV44 the contact info is ",contactInfo.userInfo)
 </script>

@@ -36,10 +36,10 @@ const formData = ref<UserContact>({
 })
 
 const handleSubmit = () => {
-    console.log('Form submitted!')
-    console.log('User Form Data:', formData.value)
+    // console.log('Form submitted!')
+    // console.log('User Form Data:', formData.value)
     contactInfo.setUserInfo(formData.value)
-    console.log('User Form Data:',  contactInfo.userInfo)
+    // console.log('User Form Data:',  contactInfo.userInfo)
    
 }
 </script>
