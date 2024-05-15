@@ -18,6 +18,8 @@
   <script setup lang="ts">
   import type { UserData } from '~/pages/types/userData'
   import { useUserStore } from '~/stores/userStore'
+  import axios from 'axios' 
+
 
   const userData = ref<UserData>({
     name: '',
@@ -33,9 +35,25 @@
   const passwordsMatch = computed(() => userData.value.password === confirmPassword.value)
   
   const submitForm = () => {
-    console.log('Form submitted!')
-    console.log('User Data:', userData.value)
-    userStore.setUserInfo(userData.value)
+  // Check if passwords match
+  if (!passwordsMatch.value) {
+    alert('Passwords do not match!')
+    return
   }
+
+  // Send data to backend
+  axios.post('http://localhost:3000/api/signup', userData.value)
+    .then(response => {
+      console.log('Response from backend:', response.data)
+      alert('Signup successful!') 
+    })
+    .catch(error => {
+      console.error('Error submitting form:', error)
+      alert('An error occurred during signup. Please try again later.')
+      alert(response.data)
+
+    })
+}
+
   
   </script>

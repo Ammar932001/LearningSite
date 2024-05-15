@@ -1,5 +1,6 @@
 <template>
-<div class="flex justify-between bg-gray-400 text-white pt-4 pb-4" >
+<div class=" bg-gray-400 text-white pt-4 pb-4" >
+  <div class="container flex justify-between mx-auto">
     <div>Logo</div>
     <div class="flex">
       <ul class="flex gap-2">
@@ -17,6 +18,8 @@
         </li>
       </ul>
     </div>
+  </div>
+   
   </div>
 </template>
 <script setup lang="ts">
